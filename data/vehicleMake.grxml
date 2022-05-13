@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+ xml:lang="en-US" mode="voice" root="vehicleMake">
+<meta name="swirec_compile_parser_with_weights" content="1"/>
+<meta name="swirec_normalize_to_probabilities" content="1"/>
+
+   <rule id="vehicleMake" scope="public">
+      <one-of>
+         <item>
+           <ruleref uri="#vocab"/>
+           <tag><![CDATA[
+              vehicleMake=vocab.V;
+           ]]></tag>
+         </item>
+      </one-of>
+   </rule>
+
+   <rule id="vocab">
+      <one-of>
+          <item> Acura <tag><![CDATA[ V='Acura' ]]></tag> </item>
+          <item> Alfa Romeo <tag><![CDATA[ V='Alfa Romeo' ]]></tag> </item>
+          <item> American Motors Corporation <tag><![CDATA[ V='American Motors Corporation' ]]></tag> </item>
+          <item> AM General <tag><![CDATA[ V='AM General' ]]></tag> </item>
+          <item> ASC Incorporated <tag><![CDATA[ V='ASC Incorporated' ]]></tag> </item>
+          <item> Aston Martin <tag><![CDATA[ V='Aston Martin' ]]></tag> </item>
+          <item> Audi <tag><![CDATA[ V='Audi' ]]></tag> </item>
+          <item> Aurora Cars Limited <tag><![CDATA[ V='Aurora Cars Limited' ]]></tag> </item>
+          <item> Aurora Cars <tag><![CDATA[ V='Aurora Cars' ]]></tag> </item>
+          <item> Autokraft Limited <tag><![CDATA[ V='Autokraft Limited' ]]></tag> </item>
+          <item> Autokraft <tag><![CDATA[ V='Autokraft' ]]></tag> </item>
+          <item> Avanti Motor Corporation <tag><![CDATA[ V='Avanti Motor Corporation' ]]></tag> </item>
+          <item> Avanti Motor <tag><![CDATA[ V='Avanti Motor' ]]></tag> </item>
+          <item> Avanti <tag><![CDATA[ V='Avanti' ]]></tag> </item>
+          <item> Azure Dynamics <tag><![CDATA[ V='Azure Dynamics' ]]></tag> </item>
+          <item> Azure <tag><![CDATA[ V='Azure' ]]></tag> </item>
+          <item> Bentley <tag><![CDATA[ V='Bentley' ]]></tag> </item>
+          <item> Bertone <tag><![CDATA[ V='Bertone' ]]></tag> </item>
+          <item> Bill Dovell Motor Car Company <tag><![CDATA[ V='Bill Dovell Motor Car Company' ]]></tag> </item>
+          <item> Bill Dovell <tag><![CDATA[ V='Bill Dovell' ]]></tag> </item>
+          <item> Bitter Gmbh and Company. Kg <tag><![CDATA[ V='Bitter Gmbh and Company. Kg' ]]></tag> </item>
+          <item> Bitter <tag><![CDATA[ V='Bitter' ]]></tag> </item>
+          <item> BMW <tag><![CDATA[ V='BMW' ]]></tag> </item>
+          <item> BMW Alpina <tag><![CDATA[ V='BMW Alpina' ]]></tag> </item>
+          <item> Bugatti <tag><![CDATA[ V='Bugatti' ]]></tag> </item>
+          <item> Buick <tag><![CDATA[ V='Buick' ]]></tag> </item>
+          <item> BYD <tag><![CDATA[ V='BYD' ]]></tag> </item>
+          <item> Cadillac <tag><![CDATA[ V='Cadillac' ]]></tag> </item>
+          <item> CCC Engineering <tag><![CDATA[ V='CCC Engineering' ]]></tag> </item>
+          <item> Chevrolet <tag><![CDATA[ V='Chevrolet' ]]></tag> </item>
+          <item> Chrysler <tag><![CDATA[ V='Chrysler' ]]></tag> </item>
+          <item> CODA Automotive <tag><![CDATA[ V='CODA Automotive' ]]></tag> </item>
+          <item> Consulier Industries Incorporated <tag><![CDATA[ V='Consulier Industries Incorporated' ]]></tag> </item>
+          <item> Consulier Industries <tag><![CDATA[ V='Consulier Industries' ]]></tag> </item>
+          <item> CX Automotive <tag><![CDATA[ V='CX Automotive' ]]></tag> </item>
+          <item> Dabryan Coach Builders Incorporated <tag><![CDATA[ V='Dabryan Coach Builders Incorporated' ]]></tag> </item>
+          <item> Dabryan Coach Builders <tag><![CDATA[ V='Dabryan Coach Builders' ]]></tag> </item>
+          <item> Dacia <tag><![CDATA[ V='Dacia' ]]></tag> </item>
+          <item> Daewoo <tag><![CDATA[ V='Daewoo' ]]></tag> </item>
+          <item> Daihatsu <tag><![CDATA[ V='Daihatsu' ]]></tag> </item>
+          <item> Dodge <tag><![CDATA[ V='Dodge' ]]></tag> </item>
+          <item> Eagle <tag><![CDATA[ V='Eagle' ]]></tag> </item>
+          <item> Environmental Research and Development Corporation <tag><![CDATA[ V='Environmental Research and Development Corporation' ]]></tag> </item>
+          <item> E P Dutton <tag><![CDATA[ V='E P Dutton' ]]></tag> </item>
+          <item> Evans Automobiles <tag><![CDATA[ V='Evans Automobiles' ]]></tag> </item>
+          <item> Excalibur Autos <tag><![CDATA[ V='Excalibur Autos' ]]></tag> </item>
+          <item> Federal Coach <tag><![CDATA[ V='Federal Coach' ]]></tag> </item>
+          <item> Ferrari <tag><![CDATA[ V='Ferrari' ]]></tag> </item>
+          <item> Fiat <tag><![CDATA[ V='Fiat' ]]></tag> </item>
+          <item> Fisker <tag><![CDATA[ V='Fisker' ]]></tag> </item>
+          <item> Ford <tag><![CDATA[ V='Ford' ]]></tag> </item>
+          <item> General Motors <tag><![CDATA[ V='General Motors' ]]></tag> </item>
+          <item> Genesis <tag><![CDATA[ V='Genesis' ]]></tag> </item>
+          <item> Geo <tag><![CDATA[ V='Geo' ]]></tag> </item>
+          <item> GMC <tag><![CDATA[ V='GMC' ]]></tag> </item>
+          <item> Goldacre <tag><![CDATA[ V='Goldacre' ]]></tag> </item>
+          <item> Grumman Allied Industries <tag><![CDATA[ V='Grumman Allied Industries' ]]></tag> </item>
+          <item> Grumman Olson <tag><![CDATA[ V='Grumman Olson' ]]></tag> </item>
+          <item> Honda <tag><![CDATA[ V='Honda' ]]></tag> </item>
+          <item> Hummer <tag><![CDATA[ V='Hummer' ]]></tag> </item>
+          <item> Hyundai <tag><![CDATA[ V='Hyundai' ]]></tag> </item>
+          <item> Import Foreign Auto Sales Incorporated <tag><![CDATA[ V='Import Foreign Auto Sales Incorporated' ]]></tag> </item>
+          <item> Import Trade Services <tag><![CDATA[ V='Import Trade Services' ]]></tag> </item>
+          <item> Infiniti <tag><![CDATA[ V='Infiniti' ]]></tag> </item>
+          <item> Isis Imports Limited <tag><![CDATA[ V='Isis Imports Limited' ]]></tag> </item>
+          <item> Isuzu <tag><![CDATA[ V='Isuzu' ]]></tag> </item>
+          <item> Jaguar <tag><![CDATA[ V='Jaguar' ]]></tag> </item>
+          <item> JBA Motorcars <tag><![CDATA[ V='JBA Motorcars' ]]></tag> </item>
+          <item> Jeep <tag><![CDATA[ V='Jeep' ]]></tag> </item>
+          <item> J K Motors <tag><![CDATA[ V='J K Motors' ]]></tag> </item>
+          <item> Karma <tag><![CDATA[ V='Karma' ]]></tag> </item>
+          <item> Kenyon Corporation Of America <tag><![CDATA[ V='Kenyon Corporation Of America' ]]></tag> </item>
+          <item> Kia <tag><![CDATA[ V='Kia' ]]></tag> </item>
+          <item> Koenigsegg <tag><![CDATA[ V='Koenigsegg' ]]></tag> </item>
+          <item> Laforza Automobile Incorporated <tag><![CDATA[ V='Laforza Automobile Incorporated' ]]></tag> </item>
+          <item> Lambda Control Systems <tag><![CDATA[ V='Lambda Control Systems' ]]></tag> </item>
+          <item> Lamborghini <tag><![CDATA[ V='Lamborghini' ]]></tag> </item>
+          <item> Land Rover <tag><![CDATA[ V='Land Rover' ]]></tag> </item>
+          <item> Lexus <tag><![CDATA[ V='Lexus' ]]></tag> </item>
+          <item> Lincoln <tag><![CDATA[ V='Lincoln' ]]></tag> </item>
+          <item> London Coach Company Incorporated <tag><![CDATA[ V='London Coach Company Incorporated' ]]></tag> </item>
+          <item> London Taxi <tag><![CDATA[ V='London Taxi' ]]></tag> </item>
+          <item> Lotus <tag><![CDATA[ V='Lotus' ]]></tag> </item>
+          <item> Mahindra <tag><![CDATA[ V='Mahindra' ]]></tag> </item>
+          <item> Maserati <tag><![CDATA[ V='Maserati' ]]></tag> </item>
+          <item> Maybach <tag><![CDATA[ V='Maybach' ]]></tag> </item>
+          <item> Mazda <tag><![CDATA[ V='Mazda' ]]></tag> </item>
+          <item> Mcevoy Motors <tag><![CDATA[ V='Mcevoy Motors' ]]></tag> </item>
+          <item> McLaren Automotive <tag><![CDATA[ V='McLaren Automotive' ]]></tag> </item>
+          <item> Mercedes-Benz <tag><![CDATA[ V='Mercedes-Benz' ]]></tag> </item>
+          <item> Mercury <tag><![CDATA[ V='Mercury' ]]></tag> </item>
+          <item> Merkur <tag><![CDATA[ V='Merkur' ]]></tag> </item>
+          <item> MINI <tag><![CDATA[ V='MINI' ]]></tag> </item>
+          <item> Mitsubishi <tag><![CDATA[ V='Mitsubishi' ]]></tag> </item>
+          <item> Mobility Ventures LLC <tag><![CDATA[ V='Mobility Ventures LLC' ]]></tag> </item>
+          <item> Morgan <tag><![CDATA[ V='Morgan' ]]></tag> </item>
+          <item> Nissan <tag><![CDATA[ V='Nissan' ]]></tag> </item>
+          <item> Oldsmobile <tag><![CDATA[ V='Oldsmobile' ]]></tag> </item>
+          <item> Pagani <tag><![CDATA[ V='Pagani' ]]></tag> </item>
+          <item> Panos <tag><![CDATA[ V='Panos' ]]></tag> </item>
+          <item> Panoz Auto Development <tag><![CDATA[ V='Panoz Auto Development' ]]></tag> </item>
+          <item> Panoz <tag><![CDATA[ V='Panoz' ]]></tag> </item>
+          <item> Panther Car Company Limited <tag><![CDATA[ V='Panther Car Company Limited' ]]></tag> </item>
+          <item> PAS <tag><![CDATA[ V='PAS' ]]></tag> </item>
+          <item> PAS Incorporated GMC <tag><![CDATA[ V='PAS Incorporated GMC' ]]></tag> </item>
+          <item> Peugeot <tag><![CDATA[ V='Peugeot' ]]></tag> </item>
+          <item> Pininfarina <tag><![CDATA[ V='Pininfarina' ]]></tag> </item>
+          <item> Plymouth <tag><![CDATA[ V='Plymouth' ]]></tag> </item>
+          <item> Polestar Automotive USA Incorporated <tag><![CDATA[ V='Polestar Automotive USA Incorporated' ]]></tag> </item>
+          <item> Pontiac <tag><![CDATA[ V='Pontiac' ]]></tag> </item>
+          <item> Porsche <tag><![CDATA[ V='Porsche' ]]></tag> </item>
+          <item> Quantum Technologies <tag><![CDATA[ V='Quantum Technologies' ]]></tag> </item>
+          <item> Qvale <tag><![CDATA[ V='Qvale' ]]></tag> </item>
+          <item> Ram <tag><![CDATA[ V='Ram' ]]></tag> </item>
+          <item> Red Shift Limited <tag><![CDATA[ V='Red Shift Limited' ]]></tag> </item>
+          <item> Renault <tag><![CDATA[ V='Renault' ]]></tag> </item>
+          <item> Rolls-Royce <tag><![CDATA[ V='Rolls-Royce' ]]></tag> </item>
+          <item> Roush Performance <tag><![CDATA[ V='Roush Performance' ]]></tag> </item>
+          <item> RUF Automobile <tag><![CDATA[ V='RUF Automobile' ]]></tag> </item>
+          <item> Ruf Automobile Gmbh <tag><![CDATA[ V='Ruf Automobile Gmbh' ]]></tag> </item>
+          <item> Saab <tag><![CDATA[ V='Saab' ]]></tag> </item>
+          <item> Saleen <tag><![CDATA[ V='Saleen' ]]></tag> </item>
+          <item> Saleen Performance <tag><![CDATA[ V='Saleen Performance' ]]></tag> </item>
+          <item> S and S Coach Company  E P Dutton <tag><![CDATA[ V='S and S Coach Company  E P Dutton' ]]></tag> </item>
+          <item> Saturn <tag><![CDATA[ V='Saturn' ]]></tag> </item>
+          <item> Scion <tag><![CDATA[ V='Scion' ]]></tag> </item>
+          <item> Shelby <tag><![CDATA[ V='Shelby' ]]></tag> </item>
+          <item> Smart <tag><![CDATA[ V='Smart' ]]></tag> </item>
+          <item> Spyker <tag><![CDATA[ V='Spyker' ]]></tag> </item>
+          <item> SRT <tag><![CDATA[ V='SRT' ]]></tag> </item>
+          <item> Sterling <tag><![CDATA[ V='Sterling' ]]></tag> </item>
+          <item> STI <tag><![CDATA[ V='STI' ]]></tag> </item>
+          <item> Subaru <tag><![CDATA[ V='Subaru' ]]></tag> </item>
+          <item> Superior Coaches Div E P Dutton <tag><![CDATA[ V='Superior Coaches Div E P Dutton' ]]></tag> </item>
+          <item> Suzuki <tag><![CDATA[ V='Suzuki' ]]></tag> </item>
+          <item> Tecstar <tag><![CDATA[ V='Tecstar' ]]></tag> </item>
+          <item> Tesla <tag><![CDATA[ V='Tesla' ]]></tag> </item>
+          <item> Texas Coach Company <tag><![CDATA[ V='Texas Coach Company' ]]></tag> </item>
+          <item> Toyota <tag><![CDATA[ V='Toyota' ]]></tag> </item>
+          <item> TVR Engineering Limited <tag><![CDATA[ V='TVR Engineering Limited' ]]></tag> </item>
+          <item> Vector <tag><![CDATA[ V='Vector' ]]></tag> </item>
+          <item> Vixen Motor Company <tag><![CDATA[ V='Vixen Motor Company' ]]></tag> </item>
+          <item> Volga Associated Automobile <tag><![CDATA[ V='Volga Associated Automobile' ]]></tag> </item>
+          <item> Volkswagen <tag><![CDATA[ V='Volkswagen' ]]></tag> </item>
+          <item> Volvo <tag><![CDATA[ V='Volvo' ]]></tag> </item>
+          <item> VPG <tag><![CDATA[ V='VPG' ]]></tag> </item>
+          <item> Wallace Environmental <tag><![CDATA[ V='Wallace Environmental' ]]></tag> </item>
+          <item> Yugo <tag><![CDATA[ V='Yugo' ]]></tag> </item>
+      </one-of>
+   </rule>
+</grammar>

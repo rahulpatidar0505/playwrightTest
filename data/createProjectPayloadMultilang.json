@@ -1,0 +1,18 @@
+{
+    "languageDomainTopic": "gen",
+    "name": "test_import",
+    "locales": [
+        "en_US", "ja_JP", "es_US"
+    ],
+    "metadata": {
+        "created_by": [
+            "Nuance Member",
+            "test.member@test.com"
+        ],
+        "created_at": [
+            ""
+        ]
+    },
+    "ontologyId": "9442ba80-70b0-407d-b327-ac69579a38e3",
+    "id": "9442ba80-70b0-407d-b724-ojk3769t3p90"
+}

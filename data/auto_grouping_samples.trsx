@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns:nuance="https://developer.nuance.com/mix/nlu/trsx" xml:lang="eng-USA" nuance:version="2.5">
+    <metadata>
+        <entry key="created_at">2020-06-17 10:04:15+00:00</entry>
+        <entry key="created_at">2019-03-12 12:05:54+00:00</entry>
+        <entry key="created_by">test.admin@test.com</entry>
+        <entry key="created_by">Test Admin</entry>
+        <entry key="created_by">jagannath.nagare@nuance.com</entry>
+        <entry key="created_by">jagannath nagare</entry>
+        <entry key="description">Sample model for demonstration of 1 simple intent and two concepts</entry>
+        <entry key="short_name">Coffee Maker Sample Model</entry>
+        <entry key="source">Nuance Communications</entry>
+        <entry key="type">sample</entry>
+        <entry key="version">2.0.0</entry>
+    </metadata>
+    <sources>
+        <source name="nuance_custom_data" displayName="nuance_custom_data" version="1.0" type="CUSTOM" useForOOV="true"/>
+        <source name="nuance_dialog_client_data" displayName="nuance_dialog_client_data" version="1.0" type="CUSTOM" useForOOV="true"/>
+    </sources>
+    <ontology base="http://localhost:8080/resources/ontology-1.0.xml">
+        <intents>
+            <intent name="TEST"/>
+        </intents>
+        <concepts>
+            <concept name="CoffeeType"/>
+            <concept name="CoffeeSize"/>
+        </concepts>
+    </ontology>
+    <dictionaries>
+        <dictionary conceptref="CoffeeType">
+            <entry literal="americano" value="americano"/>
+            <entry literal="black" value="americano"/>
+            <entry literal="cafe latte" value="latte"/>
+            <entry literal="cafe mocha" value="mocha"/>
+            <entry literal="cap" value="cap"/>
+            <entry literal="cappuccino" value="cap"/>
+            <entry literal="chai" value="tea"/>
+            <entry literal="coffee" value="americano"/>
+            <entry literal="espresso" value="espresso"/>
+            <entry literal="latte" value="latte"/>
+            <entry literal="latte mocha" value="mocha"/>
+            <entry literal="mocha" value="mocha"/>
+            <entry literal="mocha latte" value="mocha"/>
+        </dictionary>
+        <dictionary conceptref="CoffeeSize">
+            <entry literal="double" value="med"/>
+            <entry literal="double shot" value="med"/>
+            <entry literal="grande" value="med"/>
+            <entry literal="large" value="lg"/>
+            <entry literal="medium" value="med"/>
+            <entry literal="single" value="sm"/>
+            <entry literal="single shot" value="sm"/>
+            <entry literal="small" value="sm"/>
+            <entry literal="tall" value="sm"/>
+            <entry literal="triple" value="lg"/>
+            <entry literal="triple shot" value="lg"/>
+            <entry literal="venti" value="lg"/>
+        </dictionary>
+    </dictionaries>
+    <samples>
+        <sample intentref="TEST" count="1" excluded="true" fullyVerified="false">i want coffe with intent</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i want coffe</sample>
+        <sample count="1" excluded="true" fullyVerified="false">an espresso please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i'll try a small mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i think i'll have a medium latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">large coffee please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">small cafe latte please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">gimme a mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">small coffee</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a medium espresso please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a venti cafe latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i'll have a medium cap</sample>
+        <sample count="1" excluded="true" fullyVerified="false">make a small mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">make me an americano large</sample>
+        <sample count="1" excluded="true" fullyVerified="false">an americano please , small</sample>
+        <sample count="1" excluded="true" fullyVerified="false">brew me an americano</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i want a large mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a grande cafe latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">grande cafe latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">one espresso</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a mocha latte please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">mocha latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">can i get an americano</sample>
+        <sample count="1" excluded="true" fullyVerified="false">just a small latte please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i'd like a double cappuccino</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i'll take a small coffee</sample>
+        <sample count="1" excluded="true" fullyVerified="false">make me a latte</sample>
+        <sample count="1" excluded="true" fullyVerified="false">gimme a double espresso</sample>
+        <sample count="1" excluded="true" fullyVerified="false">cappuccino</sample>
+        <sample count="1" excluded="true" fullyVerified="false">let me get a small americano</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a medium latte please</sample>
+        <sample count="1" excluded="true" fullyVerified="false">small mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">Can I get a large coffee</sample>
+        <sample count="1" excluded="true" fullyVerified="false">can i get a large latte ?</sample>
+        <sample count="1" excluded="true" fullyVerified="false">small coffee .</sample>
+        <sample count="1" excluded="true" fullyVerified="false">i'd like a medium cappuccino</sample>
+        <sample count="1" excluded="true" fullyVerified="false">a small mocha</sample>
+        <sample count="1" excluded="true" fullyVerified="false">give me a coffee , large</sample>
+        <sample count="1" excluded="true" fullyVerified="false">make me a large coffee</sample>
+        <sample count="1" excluded="true" fullyVerified="false">I would like to have a tea</sample>
+    </samples>
+</project>

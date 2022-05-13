@@ -1,12 +1,12 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('Test scenario', () =>{
-    test.only('Multiple element validation test', async ({browser}) => {
+    test('Multiple element validation test', async ({browser}) => {
         // Launch application
         const browserContext = await browser.newContext()
         const page = await browserContext.newPage()
         await page.goto('https://rahulshettyacademy.com/AutomationPractice/')
-
+        await page.pause()
         // handle radio button
         const radioButton_locator = page.locator("input[value='radio2']")
         await expect(page).toHaveURL('https://rahulshettyacademy.com/AutomationPractice/')
@@ -71,6 +71,16 @@ test.describe('Test scenario', () =>{
             tab.click()
         ])
         await newPage.locator("div[class='logo'] a").isVisible()
+
+        // window handle
+
+        // frame handle
+
+        // links handle
+
+        // checkbox handle
+
+        // read json data
     });
 
     test('File upload test', async ({page}) =>{

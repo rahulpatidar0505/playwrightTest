@@ -1,0 +1,7 @@
+{
+    "name": "nuance_custom_data",
+    "displayName": "nuance_custom_data",
+    "version": "1.0",
+    "type": "CUSTOM",
+    "useForOOV": true
+}
