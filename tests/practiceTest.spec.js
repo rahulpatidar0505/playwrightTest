@@ -6,7 +6,7 @@ test.describe('Test scenario', () =>{
         const browserContext = await browser.newContext()
         const page = await browserContext.newPage()
         await page.goto('https://rahulshettyacademy.com/AutomationPractice/')
-        await page.pause()
+        // await page.pause()
         // handle radio button
         const radioButton_locator = page.locator("input[value='radio2']")
         await expect(page).toHaveURL('https://rahulshettyacademy.com/AutomationPractice/')
@@ -50,11 +50,11 @@ test.describe('Test scenario', () =>{
 
         // handle mouse over
         await page.locator("#mousehover").hover()
-        mouseoverLocator = page.locator(".mouse-hover-content")
+        const mouseoverLocator = page.locator(".mouse-hover-content")
         await mouseoverLocator.locator(':has-text("Top")').click();
 
         // handle webtable
-        rowLocator = page.locator("xpath=//div[@class='left-align']//table[@id='product']//tr")
+        const rowLocator = page.locator("xpath=//div[@class='left-align']//table[@id='product']//tr")
         const rowCount =  await rowLocator.count()
         for (let i = 1; i <=rowCount; i++) {
             const course = await rowLocator.nth(i).locator("xpath=td[2]").textContent()
