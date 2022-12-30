@@ -5,7 +5,7 @@ test('Tab handle', async({browser}) => {
     const page = await browserContext.newPage()
     await page.goto("https://demoqa.com/browser-windows")
 
-    const [newPage] = await Promise.all([
+    const [newPage] = await Promise.all([ // here newPage object has access to new page
         browserContext.waitForEvent('page'),
         page.locator("#tabButton").click()
     ])
@@ -20,7 +20,7 @@ test('Window handle', async({browser}) => {
     const page = await browserContext.newPage()
     await page.goto("https://demoqa.com/browser-windows")
 
-    const [newWindow] = await Promise.all([
+    const [newWindow] = await Promise.all([ // here newWindow object has access to new page
         browserContext.waitForEvent("page"),
         page.locator("#windowButton").click()
     ])
@@ -34,7 +34,7 @@ test('Window messgae', async({browser}) => {
     const page = await browserCotext.newPage()
     await page.goto("https://demoqa.com/browser-windows")
 
-    const [newWindow] = await Promise.all([
+    const [newWindow] = await Promise.all([ // here newWindow object has access to new page
          browserCotext.waitForEvent("page"),
         page.locator("#messageWindowButton").click()
     ])

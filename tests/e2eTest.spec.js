@@ -1,7 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
 test('Register', async ({page}) => {
-
     const firstName = page.locator("#firstName")
     const lastName = page.locator("#lastName") 
     const email = page.locator("#userEmail")

@@ -1,0 +1,19 @@
+Playwright feature:
+     Open source
+     Support multiple OS
+     Support multiple languages
+     Support multiple browser
+     Auto-wait capabilities
+     Default time-out for test = 30s
+     Default time-out for expect =5s
+
+
+When there is error pop-up which appears for few second, make sure to write locator at that time and Playwright
+will automatically wait to perform action on that element.
+
+
+When there is service based application and we use allTextContent() function it will not wait automatically, 
+So, we have to call waitForLoadState('networkIdleState')
+
+await always used with actions.
+
