@@ -13,6 +13,7 @@ const config = {
     actionTimeout: 0,
     browserName : 'chromium',
     headless : false,
+    viewport: { width: 1680, height: 1120 }
     // screenshot : 'on',
     // trace : 'on',//off,on
     // baseURL: 'http://localhost:3000',

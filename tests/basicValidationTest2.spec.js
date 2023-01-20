@@ -72,13 +72,6 @@ test.describe('Test scenario', () =>{
         ])
         await newPage.locator("div[class='logo'] a").isVisible()
 
-        // window handle
-
-        // frame handle
-
-        // links handle
-
-        // checkbox handle
 
         // read json data
     });

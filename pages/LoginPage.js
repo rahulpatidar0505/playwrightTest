@@ -3,23 +3,26 @@ class LoginPage {
 constructor(page)
 {
     this.page = page;
-    this.signInbutton= page.locator("[value='Login']");
-    this.userName = page.locator("#userEmail");
-    this.password = page.locator("#userPassword");
-
+    this.signInLink= page.getByRole('link', { name: 'Sign In' });
+    this.cutomerLoginText = page.getByText('Customer Login');
+    this.email = page.getByRole('textbox', { name: 'Email*' });
+    this.password = page.getByLabel('Password');
+    this.signInButton = page.getByRole('button', { name: 'Sign In' });
+    this.forgotPasswordLink = page.getByRole('link', { name: 'Forgot Your Password?' });
+    this.panelView = page.getByRole('listitem').filter({ hasText: 'Change My Account My Wish List Sign Out' }).locator('button');
+    this.myAccount = page.getByRole('link', { name: 'My Account' })
 }
 
 async goTo()
 {
-    await this.page.goto("https://rahulshettyacademy.com/client");
-    // await this.userName.type('test0505@gmail.com');
+    await this.page.goto("https://magento.softwaretestingboard.com/");
 }
-async loginToApplication(username,password)
+async loginToApplication(email,password)
 {
-    await this.userName.type(username);
+    await this.signInLink.click()
+    await this.email.type(email);
     await this.password.type(password);
-    await this.signInbutton.click();
-    await this.page.waitForLoadState('networkidle');
+    await this.signInButton.click();
 }
 
 }
