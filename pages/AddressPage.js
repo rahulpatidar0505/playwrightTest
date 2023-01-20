@@ -1,7 +1,6 @@
-class AddressPage {
+exports.AddressPage = class AddressPage {
 
-    constructor(page) 
-    {
+    constructor(page) {
         this.page = page;
         this.editAddressLink = page.getByRole('link', { name: 'Edit Address' });
         this.firstName = page.getByLabel('First Name');
@@ -17,8 +16,7 @@ class AddressPage {
         this.savedAddressText = page.getByText('You saved the address.')
     }
 
-    async fillAddress(firstName, lastName, company, phoneNumber, streetAdress, country, state, city, zipCode) 
-    {
+    async fillAddress(firstName, lastName, company, phoneNumber, streetAdress, country, state, city, zipCode) {
         await this.editAddressLink.first().click();
         await this.firstName.fill(firstName);
         await this.lastName.fill(lastName);
@@ -32,8 +30,7 @@ class AddressPage {
         await this.saveAddressButton.click();
     }
 
-    async verifyAddressSaved(){
+    async verifyAddressSaved() {
         return await this.savedAddressText.textContent()
     }
 }
-module.exports = { AddressPage }
