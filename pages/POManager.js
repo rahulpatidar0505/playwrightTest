@@ -1,6 +1,7 @@
 const { LoginPage } = require('./LoginPage');
 const { AddressPage } = require('./AddressPage')
-const {AccountPage} = require('./AccountPage')
+const { AccountPage } = require('./AccountPage');
+const { CheckoutPage } = require('./CheckoutPage');
 
 exports.POManager = class POManager {
 
@@ -9,7 +10,7 @@ exports.POManager = class POManager {
         this.loginPage = new LoginPage(this.page);
         this.addressPage = new AddressPage(this.page)
         this.accountPage = new AccountPage(this.page)
-
+        this.checkoutPage = new CheckoutPage(this.page)
     }
 
     getLoginPage() {
@@ -22,5 +23,9 @@ exports.POManager = class POManager {
 
     getAccountPage() {
         return this.accountPage;
+    }
+
+    getCheckoutPage() {
+        return this.checkoutPage;
     }
 }

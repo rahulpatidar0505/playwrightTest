@@ -1,5 +1,3 @@
-import { Page } from "@playwright/test"
-
 exports.CheckoutPage =  class CheckoutPage{
     
     constructor(page){
@@ -15,7 +13,14 @@ exports.CheckoutPage =  class CheckoutPage{
         this.myorderLink = page.getByRole('link', { name: 'My Orders' })
     }
 
+    async placeOrder(){
+        await this.shipHere.click();
+        await this.shippingMethod.click();
+        await this.nextButton.click()
+        await this.placeOrderButton.click()
+    }
+
     async goToMyOrders() {
-        this.myorderLink.click()
+        await this.myorderLink.click()
     }
 }
