@@ -1,4 +1,6 @@
-class CheckoutPage{
+import { Page } from "@playwright/test"
+
+exports.CheckoutPage =  class CheckoutPage{
     
     constructor(page){
         this.page = page;
@@ -12,6 +14,8 @@ class CheckoutPage{
 
         this.myorderLink = page.getByRole('link', { name: 'My Orders' })
     }
-}
 
-module.exports = {CheckoutPage}
+    async goToMyOrders() {
+        this.myorderLink.click()
+    }
+}

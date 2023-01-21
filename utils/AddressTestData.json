@@ -1,0 +1,11 @@
+{
+    "firstName" : "Test",
+    "lastName" : "Test",
+    "company" : "abc",
+    "phoneNumber" : "1234567890",
+    "streetAdress" : "abc india",
+    "country" : "IN",
+    "state" : "553",
+    "city" : "Pune",
+    "zipCode" : "123456"
+}

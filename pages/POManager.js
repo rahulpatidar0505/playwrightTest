@@ -1,5 +1,6 @@
 const { LoginPage } = require('./LoginPage');
 const { AddressPage } = require('./AddressPage')
+const {AccountPage} = require('./AccountPage')
 
 exports.POManager = class POManager {
 
@@ -7,6 +8,7 @@ exports.POManager = class POManager {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.addressPage = new AddressPage(this.page)
+        this.accountPage = new AccountPage(this.page)
 
     }
 
@@ -16,5 +18,9 @@ exports.POManager = class POManager {
 
     getAddressPage() {
         return this.addressPage;
+    }
+
+    getAccountPage() {
+        return this.accountPage;
     }
 }

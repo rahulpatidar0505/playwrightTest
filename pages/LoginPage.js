@@ -1,8 +1,10 @@
+
 exports.LoginPage = class LoginPage {
 
-    loginPageTitle = "Customer Login Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites"
+    loginPageTitle ="Customer Login Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites" 
     invalidCredErrorMsg = "Invalid Form Key. Please refresh the page."
     invalidEmailText = "Please enter a valid email address"
+    homePageTitle = "Home Page - Magento eCommerce - website to practice selenium | demo website for automation testing | selenium practice sites | selenium demo sites | best website to practice selenium automation | automation practice sites Magento Commerce - website to practice selenium | demo website for automation testing | selenium practice sites"
 
     constructor(page) {
         this.page = page;
@@ -26,7 +28,14 @@ exports.LoginPage = class LoginPage {
         await this.signInLink.click()
         await this.email.type(email);
         await this.password.type(password);
+        await this.page.pause()
+        // await this.signInButton.waitFor();
         await this.signInButton.click();
+        // await this.page.waitForLoadState('networkidle');     
     }
 
+    async goTomyAccount() {
+        await this.panelView.click();
+        await this.myAccount.click()
+    }
 }

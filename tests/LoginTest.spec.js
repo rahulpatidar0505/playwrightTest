@@ -8,7 +8,7 @@ test('Valid Login Test', async ({ page }) => {
 
     await loginPage.goTo();
     await loginPage.loginToApplication("abc0505@gmail.com", "Test@123");
-    await expect(page).toHaveTitle(loginPage.loginPageTitle)
+    await expect(page).toHaveTitle(loginPage.homePageTitle)
 });
 
 test('Invalid Login Test', async ({ page }) => {
@@ -18,6 +18,8 @@ test('Invalid Login Test', async ({ page }) => {
     await loginPage.goTo();
     await loginPage.loginToApplication("test@gmail.com", "Test@123");
     await expect(loginPage.loginErrMsg.first()).toHaveText(loginPage.invalidCredErrorMsg);
+    await expect(loginPage.loginErrMsg.first()).toContainText(loginPage.invalidCredErrorMsg);
+
 });
 
 test('Invalid email Test', async ({ page }) => {
@@ -26,5 +28,5 @@ test('Invalid email Test', async ({ page }) => {
 
     await loginPage.goTo();
     await loginPage.loginToApplication("test@gg.com", "Test@123");
-    await expect(loginPage.invalidEmail).toHaveText(loginPage.invalidCredErrorMsg);
+    await expect(loginPage.invalidEmail).toHaveText(loginPage.invalidEmailText);
 });

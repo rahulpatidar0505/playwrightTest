@@ -1,30 +1,20 @@
 import { test, expect } from '@playwright/test';
-
+const { POManager } = require('../pages/POManager');
+const addressDetails = JSON.parse(JSON.stringify(require('../utils/AddressTestData.json')))
 test('test', async ({ page }) => {
-  await page.goto('https://magento.softwaretestingboard.com/');
-  await page.getByRole('link', { name: 'Edit Address' }).first().click();
-  await page.getByLabel('First Name').click();
-  await page.getByLabel('First Name').fill('Test11');
-  await page.getByLabel('Last Name').click();
-  await page.getByLabel('Last Name').fill('Test22');
-  await page.getByLabel('Company').click();
-  await page.getByLabel('Company').fill('abc');
-  await page.getByLabel('Phone Number').click({
-    clickCount: 3
-  });
-  await page.getByLabel('Phone Number').fill('123');
-  await page.getByRole('textbox', { name: 'Street Address\n* Street Address: Line 1' }).click({
-    clickCount: 3
-  });
-  await page.getByRole('textbox', { name: 'Street Address\n* Street Address: Line 1' }).fill('q');
-  await page.getByLabel('City').click();
-  await page.getByLabel('City').press('Meta+a');
-  await page.getByLabel('City').fill('ban');
-  await page.getByRole('combobox', { name: 'State/Province\n*' }).selectOption('552');
-  await page.getByLabel('Zip/Postal Code').dblclick();
-  await page.getByLabel('Zip/Postal Code').fill('12345.0fwrw');
-  await page.getByRole('combobox', { name: 'Country\n*' }).selectOption('IS');
-  await page.getByRole('button', { name: 'Save Address' }).click();
-  await page.getByText('You saved the address.').click();
-  await page.getByText('You saved the address.').dblclick();
+    const poManager = new POManager(page);
+    const loginPage = poManager.getLoginPage();
+    const addressPage = poManager.getAddressPage();
+
+    await loginPage.goTo();
+    await loginPage.loginToApplication("abc0505@gmail.com", "Test@123");
+    await expect(page).toHaveTitle(loginPage.homePageTitle)
+
+    await loginPage.goTomyAccount()
+    await addressPage.fillAddress(addressDetails.firstName, addressDetails.lastName, addressDetails.company,
+        addressDetails.phoneNumber, addressDetails.streetAdress, addressDetails.country, addressDetails.state,
+        addressDetails.city, addressDetails.zipCode
+    )
+    await expect(addressPage.savedAddressText).toContainText("You saved the address.");
+
 });

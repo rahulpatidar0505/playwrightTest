@@ -9,9 +9,9 @@ exports.AddressPage = class AddressPage {
         this.phoneNumber = page.getByLabel('Phone Number');
         this.streetAdress = page.getByRole('textbox', { name: 'Street Address\n* Street Address: Line 1' });
         this.city = page.getByLabel('City');
-        this.state = page.getByRole('combobox', { name: 'State/Province\n*' });
+        this.state = page.locator("//select[@id='region_id']");
         this.zipCode = page.getByLabel('Zip/Postal Code');
-        this.country = page.getByRole('combobox', { name: 'Country\n*' });
+        this.country = page.locator("//select[@id='country']");
         this.saveAddressButton = page.getByRole('button', { name: 'Save Address' });
         this.savedAddressText = page.getByText('You saved the address.')
     }
@@ -28,9 +28,5 @@ exports.AddressPage = class AddressPage {
         await this.city.fill(city);
         await this.zipCode.fill(zipCode);
         await this.saveAddressButton.click();
-    }
-
-    async verifyAddressSaved() {
-        return await this.savedAddressText.textContent()
     }
 }
